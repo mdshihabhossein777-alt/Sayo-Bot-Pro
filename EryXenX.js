@@ -33,7 +33,12 @@ function validJSON(pathDir) {
 	try {
 		if (!fs.existsSync(pathDir))
 			throw new Error(`File "${pathDir}" not found`);
-		execSync(`npx jsonlint "${pathDir}"`, { stdio: 'pipe' });
+		try {
+    const fileContent = require('fs-extra').readFileSync(pathDir, 'utf8');
+    JSON.parse(fileContent);
+} catch (err) {
+    throw new Error(`Invalid JSON file "${pathDir}": ${err.message}`);
+} 
 		return true;
 	}
 	catch (err) {
