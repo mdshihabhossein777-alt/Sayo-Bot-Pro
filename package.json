@@ -8,7 +8,7 @@
     "npm": ">=7.0.0"
   },
   "dependencies": {
-    "fca-eryxenx": "^39.2.8",
+    "@eryxenx/fca": "^1.1.7",
     "axios": "^1.4.0",
     "bcrypt": "^5.0.1",
     "body-parser": "^1.20.1",
