@@ -1,7 +1,7 @@
 {
   "name": "goatbot-pro",
   "version": "7.0.0",
-  "description": "Enhanced Facebook Messenger bot framework, forked and modified by EryXenX from Goat Bot V2 (originally by NTKhang).",
+  "description": "Enhanced Facebook Messenger bot framework.",
   "main": "index.js",
   "engines": {
     "node": "20.x",
@@ -49,19 +49,8 @@
     "yt-search": "^2.13.1"
   },
   "scripts": {
-    "start": "node index.js",
-    "dev": "NODE_ENV=development node index.js",
-    "prod": "NODE_ENV=production node index.js"
+    "start": "node index.js"
   },
   "author": "NTKhang",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ntkhang03/Goat-Bot-V2.git"
-  },
-  "keywords": [],
-  "bugs": {
-    "url": "https://github.com/ntkhang03/Goat-Bot-V2/issues"
-  },
-  "homepage": "https://github.com/ntkhang03/Goat-Bot-V2#readme"
+  "license": "MIT"
 }
