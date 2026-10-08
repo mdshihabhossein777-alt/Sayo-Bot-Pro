@@ -1,0 +1,71 @@
+"use strict";
+
+var actionNames = [
+  "addExternalModule",
+  "addUserToGroup",
+  "changeAdminStatus",
+  "changeArchivedStatus",
+  "changeBio",
+  "changeBlockedStatus",
+  "changeGroupImage",
+  "changeNickname",
+  "changeThreadColor",
+  "changeThreadEmoji",
+
+  "createNewGroup",
+  "createPoll",
+  "deleteMessage",
+  "deleteThread",
+  "editMessage",
+  "forwardAttachment",
+  "getAvatarUser",
+  "getCurrentUserID",
+
+  "getEmojiUrl",
+  "getFriendsList",
+  "getMessage",
+  "getRegion",
+  "getThreadHistory",
+  "getThreadInfo",
+  "getThreadList",
+  "getThreadPictures",
+  "getUserID",
+  "getUserInfo",
+  "handleMessageRequest",
+  "listenMqtt",
+  "logout",
+  "markAsDelivered",
+  "markAsRead",
+  "markAsReadAll",
+  "markAsSeen",
+  "muteThread",
+  "pinMessage",
+  "refreshFb_dtsg",
+  "removeUserFromGroup",
+  "resolvePhotoUrl",
+  "searchForThread",
+  "searchStickers",
+  "sendMessage",
+  "sendMessageMqtt",
+  "sendTypingIndicator",
+  // "sendTypingIndicatorMqtt",
+  "setMessageReaction",
+  "setMessageReactionMqtt",
+  "setProfileGuard",
+  "setTitle",
+  "stopListenMqtt",
+  "threadColors",
+
+  "unsendMessage",
+  "httpGet",
+  "httpPost",
+  "getThreadListDeprecated",
+  "getThreadHistoryDeprecated",
+  "getThreadInfoDeprecated",
+  "getBotInitialData"
+];
+
+module.exports = actionNames.reduce(function (acc, name) {
+  acc[name] = require("./" + name + ".js");
+  return acc;
+}, {});
